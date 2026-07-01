@@ -1,0 +1,145 @@
+/* ===========================
+   Contact Section
+=========================== */
+
+#contact{
+    background:#000;
+    color:#fff;
+    padding:100px 0;
+}
+
+.contact-info{
+    background:#111;
+    border:1px solid #dc2626;
+    border-radius:20px;
+    padding:35px;
+    height:100%;
+    transition:.4s;
+}
+
+.contact-info:hover{
+    box-shadow:0 0 25px rgba(220,38,38,.4);
+    transform:translateY(-5px);
+}
+
+.contact-info h3{
+    color:#dc2626;
+    margin-bottom:20px;
+}
+
+.contact-info p{
+    color:#ccc;
+    margin-bottom:15px;
+}
+
+.contact-info i{
+    color:#dc2626;
+    font-size:22px;
+    margin-right:10px;
+}
+
+.contact-form{
+    background:#111;
+    border:1px solid #dc2626;
+    border-radius:20px;
+    padding:35px;
+    transition:.4s;
+}
+
+.contact-form:hover{
+    box-shadow:0 0 25px rgba(220,38,38,.4);
+}
+
+.contact-form .form-control{
+    background:#1b1b1b;
+    border:1px solid #333;
+    color:#fff;
+    padding:14px;
+    margin-bottom:20px;
+}
+
+.contact-form .form-control:focus{
+    background:#1b1b1b;
+    color:#fff;
+    border-color:#dc2626;
+    box-shadow:0 0 10px rgba(220,38,38,.4);
+}
+
+.contact-form .form-control::placeholder{
+    color:#999;
+}
+
+.send-btn{
+    width:100%;
+    background:#dc2626;
+    border:none;
+    color:#fff;
+    padding:14px;
+    border-radius:50px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.send-btn:hover{
+    background:#991b1b;
+    transform:translateY(-3px);
+    box-shadow:0 0 20px rgba(220,38,38,.5);
+}
+
+.social-icons a{
+    display:inline-flex;
+    justify-content:center;
+    align-items:center;
+    width:45px;
+    height:45px;
+    border-radius:50%;
+    background:#dc2626;
+    color:#fff;
+    margin-right:10px;
+    text-decoration:none;
+    transition:.3s;
+}
+
+.social-icons a:hover{
+    background:#991b1b;
+    transform:scale(1.1);
+}
+
+/* Input & Select */
+
+.contact-form .form-control,
+.contact-form .form-select{
+    background:#1b1b1b;
+    color:#fff;
+    border:1px solid #333;
+    padding:14px;
+    margin-bottom:20px;
+}
+
+/* Placeholder */
+
+.contact-form .form-control::placeholder{
+    color:#999;
+}
+
+/* Select text */
+
+.contact-form .form-select{
+    color:#999;   /* Same shade as placeholder */
+}
+
+/* When user selects an option */
+
+.contact-form .form-select:valid{
+    color:#fff;
+}
+
+/* Focus */
+
+.contact-form .form-control:focus,
+.contact-form .form-select:focus{
+    background:#1b1b1b;
+    color:#fff;
+    border-color:#dc2626;
+    box-shadow:0 0 10px rgba(220,38,38,.5);
+}

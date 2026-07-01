@@ -1,0 +1,125 @@
+#about{
+
+    background:#000;
+
+    color:#fff;
+
+    padding:100px 0;
+
+}
+
+.about-card{
+
+    background:#111;
+
+    padding:40px;
+
+    border-radius:20px;
+
+    border:1px solid #dc2626;
+
+    transition:.4s;
+
+}
+
+.about-card:hover{
+
+    box-shadow:0 0 30px rgba(220,38,38,.4);
+
+    transform:translateY(-8px);
+
+}
+
+.about-card h3{
+
+    color:#dc2626;
+
+    margin-bottom:20px;
+
+}
+
+.about-card p{
+
+    color:#ccc;
+
+    line-height:1.9;
+
+}
+
+.about-tags{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:10px;
+
+    margin-top:25px;
+
+}
+
+.about-tags span{
+
+    background:#dc2626;
+
+    color:white;
+
+    padding:8px 18px;
+
+    border-radius:30px;
+
+    font-size:14px;
+
+}
+
+.stats-card{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:20px;
+
+}
+
+.stat-box{
+
+    background:#111;
+
+    border:1px solid #dc2626;
+
+    border-radius:20px;
+
+    text-align:center;
+
+    padding:35px;
+
+    transition:.4s;
+
+}
+
+.stat-box:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 0 25px rgba(220,38,38,.4);
+
+}
+
+.stat-box h2{
+
+    color:#dc2626;
+
+    font-size:42px;
+
+    font-weight:bold;
+
+}
+
+.stat-box p{
+
+    color:#ddd;
+
+    margin-top:10px;
+
+}

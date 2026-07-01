@@ -1,0 +1,119 @@
+<section id="contact">
+
+    <div class="container">
+
+        <h2 class="section-title">Contact Me</h2>
+
+        <p class="section-subtitle">
+            Feel free to reach out for opportunities or collaborations.
+        </p>
+
+        <div class="row g-4">
+
+            <!-- Left Side -->
+            <div class="col-lg-5">
+
+                <div class="contact-info">
+
+                    <h3>Let's Connect</h3>
+
+                    <p>
+                        <i class="bi bi-envelope-fill"></i>
+                        jananapriya212@gmail.com
+                    </p>
+
+                    <p>
+                        <i class="bi bi-telephone-fill"></i>
+                        +91 98947474--
+                    </p>
+
+                    <p>
+                        <i class="bi bi-geo-alt-fill"></i>
+                        Tamil Nadu, India
+                    </p>
+
+                    <div class="social-icons mt-4">
+
+                        <a href="#"><i class="bi bi-github"></i></a>
+
+                        <a href="#"><i class="bi bi-linkedin"></i></a>
+
+                        <a href="#"><i class="bi bi-instagram"></i></a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Right Side -->
+            <div class="col-lg-7">
+
+                <div class="contact-form">
+
+                    <!-- Name -->
+                    <input
+                       type="text"
+                       class="form-control"
+                       placeholder="Your Name"
+                       [(ngModel)]="name">
+
+                    <input
+                       type="email"
+                       class="form-control"
+                       placeholder="Your Email"
+                       [(ngModel)]="email">
+
+                    <!-- Profession Dropdown -->
+                    <select
+                        class="form-select"
+                        [(ngModel)]="selectedProfession"
+                        (change)="checkProfession()"
+                         required>
+
+                        <option value="">Select Your Profession</option>
+
+                        <option value="Student">Student</option>
+
+                        <option value="Recruiter">Recruiter</option>
+
+                        <option value="HR">HR</option>
+
+                        <option value="Working Professional">
+                            Working Professional
+                        </option>
+
+                        <option value="Freelancer">Freelancer</option>
+
+                        <option value="Other">Other</option>
+
+                    </select>
+
+                    <!-- Show only when Other is selected -->
+                    <input
+                        *ngIf="showOther"
+                        type="text"
+                        class="form-control mt-3"
+                        placeholder="Enter Your Profession"
+                        [(ngModel)]="otherProfession">
+
+                    <!-- Message -->
+                    <textarea
+                      rows="5"
+                      class="form-control mt-3"
+                      placeholder="Your Message"
+                      [(ngModel)]="message"></textarea>
+
+                    <button class="send-btn mt-3" (click)="sendMessage()">
+                       Send Message
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>

@@ -1,0 +1,143 @@
+<div class="container py-5">
+
+    <h1 class="text-center text-danger mb-5">
+        Portfolio Dashboard
+    </h1>
+
+
+ 
+    <!-- Dashboard Cards -->
+    <div class="row g-4">
+
+        <div class="col-md-3">
+            <div class="dashboard-card">
+                <h2>{{totalVisitors}}</h2>
+                <p>Total Visitors</p>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="dashboard-card">
+                <h2>{{todayVisitors}}</h2>
+                <p>Today's Visitors</p>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="dashboard-card">
+                <h2>{{visitorList.length}}</h2>
+                <p>Visitor Records</p>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="dashboard-card">
+                <h2>{{totalMessages}}</h2>
+                <p>Total Messages</p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Visitor Search -->
+    <div class="mt-5">
+
+        <h3 class="text-white mb-3">Visitors</h3>
+
+        <input
+            type="text"
+            class="form-control search-box mb-3"
+            placeholder="Search Visitors..."
+            [(ngModel)]="searchText"
+            (input)="searchVisitor()">
+
+        <div class="table-responsive">
+
+            <table class="table table-dark table-hover">
+
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Phone</th>
+                        <th>Profession</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    <tr *ngFor="let visitor of filteredVisitors">
+
+                    
+
+                        <td>{{visitor.name}}</td>
+                        <td>{{visitor.email}}</td>
+                        <td>{{visitor.phone}}</td>
+                        <td>{{visitor.profession}}</td>
+
+                    </tr>
+
+                    
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+    <!-- Contact Messages -->
+
+    <div class="mt-5">
+
+        <h3 class="text-white mb-3">Contact Messages</h3>
+
+        <input
+            type="text"
+            class="form-control search-box mb-3"
+            placeholder="Search Messages..."
+            [(ngModel)]="messageSearch"
+            (input)="searchMessage()">
+
+        <div class="table-responsive">
+
+            <table class="table table-striped table-dark table-hover">
+
+                <thead>
+
+                    <tr>
+
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Subject</th>
+                        <th>Message</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    @for(message of filteredMessages; track message.id){
+
+                    <tr>
+
+                        <td>{{message.name}}</td>
+                        <td>{{message.email}}</td>
+                        <td>{{message.subject}}</td>
+                        <td>{{message.message}}</td>
+
+                    </tr>
+
+                    }
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+</div>

@@ -1,0 +1,45 @@
+.navbar{
+    padding:18px 0;
+}
+
+.nav-link{
+
+    color:white !important;
+
+    margin-left:20px;
+
+    position:relative;
+
+    transition:.3s;
+}
+
+.nav-link:hover{
+
+    color:#3B82F6 !important;
+
+}
+
+.nav-link::after{
+
+    content:"";
+
+    width:0;
+
+    height:2px;
+
+    background:#3B82F6;
+
+    position:absolute;
+
+    left:0;
+
+    bottom:-5px;
+
+    transition:.3s;
+}
+
+.nav-link:hover::after{
+
+    width:100%;
+
+}

@@ -1,0 +1,190 @@
+/* ===========================
+   Visitor Page
+=========================== */
+
+.visitor-page{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:radial-gradient(circle at top,#8B0000 0%,#000000 70%);
+    padding:20px;
+}
+
+/* ===========================
+   Glass Card
+=========================== */
+
+.glass-card{
+    width:450px;
+    background:rgba(255,255,255,.05);
+    backdrop-filter:blur(20px);
+    border:1px solid rgba(255,255,255,.1);
+    border-radius:25px;
+    padding:45px;
+    text-align:center;
+    box-shadow:0 20px 40px rgba(255,0,0,.15);
+    animation:fadeIn .8s ease;
+}
+
+/* ===========================
+   Heading
+=========================== */
+
+h1{
+    color:#ff3b3b;
+    font-size:42px;
+    font-weight:700;
+    margin-bottom:10px;
+}
+
+p{
+    color:#bfbfbf;
+    margin:20px 0 35px;
+    font-size:15px;
+}
+
+/* ===========================
+   Input & Select
+=========================== */
+
+.form-control,
+.form-select{
+
+    width:100%;
+    height:52px;
+    margin-bottom:18px;
+
+    background:#111 !important;
+    color:#ffffff !important;
+
+    border:1px solid #444;
+    border-radius:12px;
+
+    transition:all .3s ease;
+}
+
+/* Placeholder */
+
+.form-control::placeholder{
+    color:#9e9e9e !important;
+    opacity:1;
+}
+
+/* Select */
+
+.form-select{
+    color:#9e9e9e;
+}
+
+.form-select option{
+    background:#111;
+    color:white;
+}
+
+/* Focus */
+
+.form-control:focus,
+.form-select:focus{
+
+    background:#111 !important;
+    color:#fff !important;
+
+    border-color:#ff3b3b;
+    box-shadow:0 0 15px rgba(255,0,0,.35);
+
+    outline:none;
+}
+
+/* Autofill Fix */
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus{
+    -webkit-text-fill-color:white;
+    -webkit-box-shadow:0 0 0px 1000px #111 inset;
+}
+
+/* ===========================
+   Buttons
+=========================== */
+
+.continue-btn{
+
+    width:100%;
+    height:52px;
+
+    border:none;
+    border-radius:50px;
+
+    background:#ff1f1f;
+    color:white;
+
+    font-size:16px;
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.continue-btn:hover{
+
+    background:#d60000;
+    transform:translateY(-3px);
+
+    box-shadow:0 10px 20px rgba(255,0,0,.3);
+}
+
+.skip-btn{
+
+    width:100%;
+    margin-top:15px;
+
+    background:none;
+    border:none;
+
+    color:#9e9e9e;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.skip-btn:hover{
+
+    color:white;
+}
+
+/* ===========================
+   Error Message
+=========================== */
+
+.text-danger{
+
+    display:block;
+    text-align:left;
+    margin-top:-10px;
+    margin-bottom:15px;
+
+    color:#ff5555;
+    font-size:13px;
+}
+
+/* ===========================
+   Animation
+=========================== */
+
+@keyframes fadeIn{
+
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}

@@ -1,0 +1,167 @@
+<section class="visitor-page">
+
+    <div class="glass-card">
+
+        <h1>Welcome</h1>
+
+        <p>
+            Before exploring my portfolio, please introduce yourself.
+        </p>
+
+        <form [formGroup]="visitorForm">
+
+            <!-- Full Name -->
+            <input
+                type="text"
+                class="form-control mb-3"
+                placeholder="Full Name"
+                formControlName="name">
+
+            @if(visitorForm.get('name')?.invalid &&
+                visitorForm.get('name')?.touched){
+
+                <small class="text-danger d-block mb-3">
+                    Please enter a valid full name (letters only).
+                </small>
+
+            }
+
+            <!-- Email -->
+            <input
+                type="email"
+                class="form-control mb-3"
+                placeholder="Email Address"
+                formControlName="email">
+
+            @if(visitorForm.get('email')?.invalid &&
+                visitorForm.get('email')?.touched){
+
+                <small class="text-danger d-block mb-3">
+                    Please enter a valid email address.
+                </small>
+
+            }
+
+            <!-- Phone -->
+            <input
+                type="text"
+                maxlength="10"
+                class="form-control mb-3"
+                placeholder="Phone Number"
+                formControlName="phone">
+
+            @if(visitorForm.get('phone')?.invalid &&
+                visitorForm.get('phone')?.touched){
+
+                <small class="text-danger d-block mb-3">
+                    Phone number must contain exactly 10 digits.
+                </small>
+
+            }
+
+            <!-- Profession -->
+            <select
+                class="form-select mb-3"
+                formControlName="profession"
+                (change)="checkProfession()">
+
+                <option value="">
+                    Select Your Profession
+                </option>
+
+                <option value="Student">
+                    Student
+                </option>
+
+                <option value="Recruiter">
+                    Recruiter
+                </option>
+
+                <option value="HR">
+                    HR
+                </option>
+
+                <option value="Software Developer">
+                    Software Developer
+                </option>
+
+                <option value="AI Engineer">
+                    AI Engineer
+                </option>
+
+                <option value="Data Scientist">
+                    Data Scientist
+                </option>
+
+                <option value="Web Developer">
+                    Web Developer
+                </option>
+
+                <option value="Working Professional">
+                    Working Professional
+                </option>
+
+                <option value="Freelancer">
+                    Freelancer
+                </option>
+
+                <option value="Other">
+                    Other
+                </option>
+
+            </select>
+
+            @if(visitorForm.get('profession')?.invalid &&
+                visitorForm.get('profession')?.touched){
+
+                <small class="text-danger d-block mb-3">
+                    Please select your profession.
+                </small>
+
+            }
+
+            <!-- Other Profession -->
+            @if(showOther){
+
+                <input
+                    type="text"
+                    class="form-control mb-3"
+                    placeholder="Enter Your Profession"
+                    formControlName="otherProfession">
+
+                @if(visitorForm.get('otherProfession')?.invalid &&
+                    visitorForm.get('otherProfession')?.touched){
+
+                    <small class="text-danger d-block mb-3">
+                        Please enter your profession.
+                    </small>
+
+                }
+
+            }
+
+            <!-- Continue Button -->
+            <button
+                type="button"
+                class="continue-btn"
+                (click)="continue()">
+
+                {{ loading ? 'Please Wait...' : 'Continue' }}
+
+            </button>
+
+            <!-- Skip Button -->
+            <button
+                type="button"
+                class="skip-btn"
+                (click)="skip()">
+
+                Skip & View Portfolio
+
+            </button>
+
+        </form>
+
+    </div>
+
+</section>
