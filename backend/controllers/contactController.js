@@ -22,16 +22,19 @@ exports.sendMessage = async (req, res) => {
 
         // Create transporter
         const transporter = nodemailer.createTransport({
-            service: "gmail",
+            host: "smtp.gmail.com",
+            port: 465,
+            secure: true,
             auth: {
-                user: process.env.EMAIL_USER,
-                pass: process.env.EMAIL_PASS
-            }
-        });
+            user: process.env.EMAIL_USER,
+            pass: process.env.EMAIL_PASS
+    }
+});
 
         // Send Email
         await transporter.sendMail({
-            from: email,
+            from: process.env.EMAIL_USER,
+            replyTo: email,
             to: process.env.EMAIL_USER,
             subject: `Portfolio Contact: ${subject}`,
             html: `
@@ -55,7 +58,7 @@ exports.sendMessage = async (req, res) => {
 
     } catch (error) {
 
-        console.log(error);
+        console.error("Mail Error:", error);
 
         res.status(500).json({
             message: "Failed to Save or Send Email"
