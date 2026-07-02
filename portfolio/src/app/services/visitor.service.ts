@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class VisitorService {
 
-  private apiUrl = 'https://portfolio-backend-lndt.onrender.com';
+  private apiUrl = 'https://portfolio-backend-lndt.onrender.com/api/visitor';
 
   constructor(private http: HttpClient) {}
 
