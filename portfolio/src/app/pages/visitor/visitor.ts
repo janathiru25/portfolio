@@ -129,13 +129,13 @@ export class VisitorComponent {
 
       error: (err) => {
 
-        this.loading = false;
+  this.loading = false;
 
-        console.log(err);
+  console.log("FULL ERROR:", err);
 
-        alert("Backend connection failed.");
+  alert(JSON.stringify(err.error));
 
-      }
+}
 
     });
 
